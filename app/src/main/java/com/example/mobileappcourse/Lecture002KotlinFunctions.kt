@@ -12,6 +12,11 @@ fun main(args: Array<String>): Unit{ //Main function signature
     println("The sum of 10 and 20 is: ${sum(10,20)}")
     introduce()
 
+    val multiplyByTwo = createMultiplier(2)
+
+    println(multiplyByTwo(5)) // 10
+    println(multiplyByTwo(8)) // 16
+
 } // Kotlin has no strict on access Modifiers
 
 fun sum( a:Int, b:Int): Int{   //Function signature(Unique ID)
@@ -42,7 +47,9 @@ fun sumHof(a: Int, b: Int, operation: (Int, Int) -> Int): Int{ //Higher Order Fu
     return a+ b+ operation(a,b)
 }
 // A function that returns a functionType :LAMBDA Function..
-
+fun createMultiplier(multiplier: Int): (Int) -> Int {
+    return { number -> number * multiplier }
+}
 
 
 
