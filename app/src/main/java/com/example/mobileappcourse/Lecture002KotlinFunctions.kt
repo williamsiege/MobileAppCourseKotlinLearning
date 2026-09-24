@@ -37,6 +37,11 @@ fun sumCompact(a: Int, b: Int) :Int = a+b //Function Compacted..
 //First Class
 val sumLambda: (Int, Int) -> Int = {a: Int, b: Int -> a+b} //Lambda Function // Stores Function type
 // A function can be treated as a datatype ,but it is not a datatype
+// Function Types.
+fun sumHof(a: Int, b: Int, operation: (Int, Int) -> Int): Int{ //Higher Order Function
+    return a+ b+ operation(a,b)
+}
+// A function that returns a functionType :LAMBDA Function..
 
 
 
