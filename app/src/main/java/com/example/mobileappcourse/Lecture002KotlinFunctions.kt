@@ -46,7 +46,7 @@ val sumLambda: (Int, Int) -> Int = {a: Int, b: Int -> a+b} //Lambda Function // 
 fun sumHof(a: Int, b: Int, operation: (Int, Int) -> Int): Int{ //Higher Order Function
     return a+ b+ operation(a,b)
 }
-// A function that returns a functionType :LAMBDA Function..
+// A function that returns a functionType :LAMBDA Function... Higher Order
 fun createMultiplier(multiplier: Int): (Int) -> Int {
     return { number -> number * multiplier }
 }
