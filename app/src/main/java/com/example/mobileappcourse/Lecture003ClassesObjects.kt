@@ -20,7 +20,7 @@ class Student( // Basics of Classes in Kotlin with  Primary Constructors
         "$name answers \"$que\": A class is a blueprint, an object is one instance built from it."
 }
 
-class Student2{ // Basics of Classes in Kotlin with Attributes and Methods. No constructors
+open class Student2{ // Basics of Classes in Kotlin with Attributes and Methods. No constructors
     //Attributes
     var number: Int = 0
     var name: String = ""
@@ -29,7 +29,7 @@ class Student2{ // Basics of Classes in Kotlin with Attributes and Methods. No c
 
     //Methods
 
-    fun introduce(){
+    open fun introduce(){
         println("Hi, My name is  $name with number $number. Studying $course in $academicYear")
     }
 
@@ -71,6 +71,15 @@ class Student2{ // Basics of Classes in Kotlin with Attributes and Methods. No c
          return answer;
      }
  }
+class StudentCouncil: Student2(){
+    val role: String = "Student Council President"
+
+    override fun introduce() {
+        println("I am $name, the $role.")
+        super.introduce()
+    }
+
+}
 
 fun main() {
     //Student Object in Kotlin.
@@ -85,6 +94,10 @@ fun main() {
 
 
     val s3 = Student3(105241, "John Doe", "Computer Science", 2)
+
+    val sc = StudentCouncil()
+    sc.name = "Jane Doe"
+    sc.introduce()
 
 
 }
