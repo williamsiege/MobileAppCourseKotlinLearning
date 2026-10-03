@@ -44,7 +44,7 @@ fun main() {
     val s004 = Student("David", 104, "BBIT")
     val s005 = Student("Eve", 105, "BBIT")
 
-    s001.showDetails()
+    s001.showDetails()// Calling the showDetails method
     s001.study()
 
     s002.showDetails()
