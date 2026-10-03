@@ -1,6 +1,6 @@
 package com.example.mobileappcourse
 // Classes & Objects
-class Student( // Basics of Classes in Kotlin with  Primary Constructors
+class Student4( // Basics of Classes in Kotlin with  Primary Constructors
     val number: Int = 0,
     val name: String,
     val course: String,
@@ -71,7 +71,7 @@ open class Student2{ // Basics of Classes in Kotlin with Attributes and Methods.
          return answer;
      }
  }
-class StudentCouncil: Student2(){
+class StudentCouncil2: Student2(){
     val role: String = "Student Council President"
 
     override fun introduce() {
@@ -90,12 +90,12 @@ fun main() {
     s1.academicYear = 2
     s1.introduce()
 
-    val s2 = Student(105241, "John Doe", "Computer Science", 2)
+    val s2 = Student4(105241, "John Doe", "Computer Science", 2)
 
 
     val s3 = Student3(105241, "John Doe", "Computer Science", 2)
 
-    val sc = StudentCouncil()
+    val sc = StudentCouncil2()
     sc.name = "Jane Doe"
     sc.introduce()
 
